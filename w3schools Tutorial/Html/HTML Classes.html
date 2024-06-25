@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Classes </title>
+        <link rel="icon" type="image/jpg" href="/images/cosmote.jpg">
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML class Attribute Tutorial</title>
+        <style>
+            .city {
+                background-color: tomato;
+                color: white;
+                border: 2px solid black;
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .note {
+                font-size: 120%;
+                color: red;
+            }
+
+            .main {
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            function myFunction() {
+                var x = document.getElementsByClassName("city");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>HTML class Attribute Tutorial</h1>
+    
+        <h2>Using The class Attribute</h2>
+        <p>The HTML <code>class</code> attribute is used to specify a class for an HTML element. Multiple HTML elements can share the same class.</p>
+    
+        <h3>Example</h3>
+        <p>In the following example we have three <code>&lt;div&gt;</code> elements with a class attribute with the value of "city". All of the three <code>&lt;div&gt;</code> elements will be styled equally according to the <code>.city</code> style definition in the head section:</p>
+    
+        <div class="city">
+            <h2>London</h2>
+            <p>London is the capital of England.</p>
+        </div>
+    
+        <div class="city">
+            <h2>Paris</h2>
+            <p>Paris is the capital of France.</p>
+        </div>
+    
+        <div class="city">
+            <h2>Tokyo</h2>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    
+        <h3>Another Example</h3>
+        <p>In the following example we have two <code>&lt;span&gt;</code> elements with a class attribute with the value of "note". Both <code>&lt;span&gt;</code> elements will be styled equally according to the <code>.note</code> style definition in the head section:</p>
+    
+        <h1>My <span class="note">Important</span> Heading</h1>
+        <p>This is some <span class="note">important</span> text.</p>
+    
+        <h2>The Syntax For Class</h2>
+        <p>To create a class; write a period (.) character, followed by a class name. Then, define the CSS properties within curly braces {}:</p>
+    
+        <h3>Example</h3>
+        <p>Create a class named "city":</p>
+        <div class="city">
+            <h2 class="city">London</h2>
+            <p>London is the capital of England.</p>
+    
+            <h2 class="city">Paris</h2>
+            <p>Paris is the capital of France.</p>
+    
+            <h2 class="city">Tokyo</h2>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    
+        <h2>Multiple Classes</h2>
+        <p>HTML elements can belong to more than one class.</p>
+        <p>To define multiple classes, separate the class names with a space, e.g. <code>&lt;div class="city main"&gt;</code>. The element will be styled according to all the classes specified.</p>
+    
+        <h3>Example</h3>
+        <p>In the following example, the first <code>&lt;h2&gt;</code> element belongs to both the "city" class and also to the "main" class, and will get the CSS styles from both of the classes:</p>
+    
+        <h2 class="city main">London</h2>
+        <h2 class="city">Paris</h2>
+        <h2 class="city">Tokyo</h2>
+    
+        <h2>Different Elements Can Share Same Class</h2>
+        <p>Different HTML elements can point to the same class name.</p>
+        <p>In the following example, both <code>&lt;h2&gt;</code> and <code>&lt;p&gt;</code> point to the "city" class and will share the same style:</p>
+    
+        <h3>Example</h3>
+        <h2 class="city">Paris</h2>
+        <p class="city">Paris is the capital of France.</p>
+    
+        <h2>Use of The class Attribute in JavaScript</h2>
+        <p>The class name can also be used by JavaScript to perform certain tasks for specific elements.</p>
+        <p>JavaScript can access elements with a specific class name with the <code>getElementsByClassName()</code> method:</p>
+    
+        <h3>Example</h3>
+        <p>Click on a button to hide all elements with the class name "city":</p>
+        <button onclick="myFunction()">Hide cities</button>
+    
+    </body>
+    
+</html>

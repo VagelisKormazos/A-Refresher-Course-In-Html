@@ -1,0 +1,12 @@
+table, th, td {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  th {
+    background-color: #96D4D4;
+    text-align: center;
+    
+  }
+  td {
+    background-color: #b7f1f1;
+  };
